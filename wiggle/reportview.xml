@@ -2,7 +2,7 @@
 <!DOCTYPE Report>
 <ReportView version="2.0">
     <Implement name="wiggle">
-        <ToolReport id="toolhle_genhierarchy" path="" status="0"/>
+        <ToolReport id="toolhle_genhierarchy" path="/home/ec2-user/src/ecp3-versa/trunk/wiggle/wiggle/hdla_gen_hierarchy.html" status="1"/>
         <ToolReport id="toolhle_runbkm" path="" status="0"/>
         <ToolReport id="toolpio" path="" status="0"/>
         <ToolReport id="toolsso" path="" status="0"/>
