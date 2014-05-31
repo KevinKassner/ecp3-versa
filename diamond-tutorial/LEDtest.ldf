@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliProject version="3.0" title="LEDtest" device="LFE3-35EA-8FN484C" default_implementation="LEDtest">
     <Options/>
-    <Implementation title="LEDtest" dir="LEDtest" description="LEDtest" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="topcount"/>
+    <Implementation title="LEDtest" dir="LEDtest" description="LEDtest" synthesis="precision" default_strategy="Strategy1">
+        <Options def_top="topcount" top="topcount"/>
         <Source name="LEDtest/source/typepackage.vhd" type="VHDL" type_short="VHDL">
             <Options/>
         </Source>

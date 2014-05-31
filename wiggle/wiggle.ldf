@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliProject version="3.0" title="wiggle" device="LFE3-35EA-8FN484C" default_implementation="wiggle">
-    <Options/>
+    <Options>
+        <Option name="HDL type" value="VHDL"/>
+    </Options>
     <Implementation title="wiggle" dir="wiggle" description="wiggle" synthesis="synplify" default_strategy="Strategy1">
-        <Options/>
+        <Options def_top="wiggle" top="wiggle"/>
         <Source name="wiggle.vhd" type="VHDL" type_short="VHDL">
-            <Options/>
+            <Options top_module="wiggle"/>
         </Source>
         <Source name="wiggle.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
