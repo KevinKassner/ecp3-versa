@@ -4,13 +4,14 @@ module test;
 
 wire [7:0] gpio;
 wire [26:0] count;
+wire shift;
 
-  /* Make a rstn that pulses once. */
-  reg rstn = 0;
+  /* Make a rst that pulses once. */
+  reg rst = 1;
   initial begin
-	$monitor("time=%10d, clk=%b, rstn=%b, gpio=%b, count=%b", $time, clk, rstn, gpio, count);
-     # 0 rstn = 0;
-     # 13 rstn = 1;
+	$monitor("time=%10d, clk=%b, rst=%b, gpio=%b, count=%b shift=%b", $time, clk, rst, gpio, count, shift);
+     # 0 rst = 1;
+     # 13 rst = 0;
      # 100 $finish;
   end
 
@@ -18,6 +19,6 @@ wire [26:0] count;
   reg clk = 0;
   always #5 clk = !clk;
 
-  wiggle u1 (clk, rstn, gpio, count);
+  wiggle u1 (clk, rst, gpio, count, shift);
 
 endmodule // test
