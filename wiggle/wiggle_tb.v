@@ -3,7 +3,7 @@
 module test;
 
 wire [7:0] led;
-wire [26:0] gpio;
+wire [23:0] gpio;
 
 reg rstn = 0;
 initial begin

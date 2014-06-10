@@ -2,14 +2,14 @@ module wiggle (clk, rstn, led, gpio);
 
 input clk, rstn;
 output [7:0] led;
-output [26:0] gpio;
+output [23:0] gpio;
 
-reg [26:0] count;
+reg [23:0] count;
 reg [7:0] sreg;
 reg shift;
 wire rstn;
 wire [7:0] led;
-wire [26:0] gpio;
+wire [23:0] gpio;
 
 assign rst = ~rstn;
 

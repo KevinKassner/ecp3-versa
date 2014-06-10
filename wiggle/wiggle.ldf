@@ -4,9 +4,9 @@
         <Option name="HDL type" value="VHDL"/>
     </Options>
     <Implementation title="wiggle" dir="wiggle" description="wiggle" synthesis="synplify" default_strategy="Strategy1">
-        <Options top="wiggle"/>
+        <Options def_top="wiggle" top="wiggle"/>
         <Source name="wiggle.v" type="Verilog" type_short="Verilog">
-            <Options/>
+            <Options top_module="wiggle"/>
         </Source>
         <Source name="wiggle.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
