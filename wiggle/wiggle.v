@@ -24,11 +24,11 @@ end
 always @(posedge clk or posedge rst)
 begin
 	if (rst)
-		shift = 0;
+		shift <= 0;
 	else if (count == 3)
-		shift = 1;
+		shift <= 1;
 	else
-		shift = 0;
+		shift <= 0;
 end
 
 always @(posedge clk or posedge rst)
