@@ -3,7 +3,6 @@ module wiggle (clk, rst, led, gpio);
 input clk, rst;
 output [7:0] led;
 output [26:0] gpio;
-output shift;
 
 reg [26:0] count;
 reg [7:0] sreg;
