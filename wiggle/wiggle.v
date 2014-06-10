@@ -1,14 +1,17 @@
-module wiggle (clk, rst, led, gpio);
+module wiggle (clk, rstn, led, gpio);
 
-input clk, rst;
+input clk, rstn;
 output [7:0] led;
 output [26:0] gpio;
 
 reg [26:0] count;
 reg [7:0] sreg;
 reg shift;
+wire rstn;
 wire [7:0] led;
 wire [26:0] gpio;
+
+assign rst = ~rstn;
 
 always @(posedge clk or posedge rst)
 begin
