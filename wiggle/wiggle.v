@@ -34,7 +34,7 @@ end
 always @(posedge clk or posedge rst)
 begin
 	if (rst) begin
-		sreg <= 1;
+		sreg <= 8'b1111_1110;
 	end else if (shift == 1) begin
 		sreg <= sreg << 1;
 		sreg[0] <= sreg[7];
