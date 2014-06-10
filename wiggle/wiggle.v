@@ -1,14 +1,15 @@
-module wiggle (clk, rst, gpio, count, shift);
+module wiggle (clk, rst, led, gpio);
 
 input clk, rst;
-output [7:0] gpio;
-output [26:0] count;
+output [7:0] led;
+output [26:0] gpio;
 output shift;
 
 reg [26:0] count;
 reg [7:0] sreg;
 reg shift;
-wire [7:0] gpio;
+wire [7:0] led;
+wire [26:0] gpio;
 
 always @(posedge clk or posedge rst)
 begin
@@ -23,7 +24,7 @@ always @(posedge clk or posedge rst)
 begin
 	if (rst) begin
 		shift = 0;
-	end if (count == 1) begin
+	end if (count == 3) begin
 		shift = 1;
 	end else begin
 		shift = 0;
@@ -42,6 +43,7 @@ begin
 	end
 end
 
-assign gpio = sreg;
+assign led = sreg;
+assign gpio = count;
 
 endmodule
