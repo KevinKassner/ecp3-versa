@@ -12,29 +12,27 @@ wire [26:0] gpio;
 
 always @(posedge clk or posedge rst)
 begin
-	if (rst) begin
+	if (rst)
 		count <= 0;
-	end else begin
+	else
 		count <= count + 1;
-	end
 end
 
 always @(posedge clk or posedge rst)
 begin
-	if (rst) begin
+	if (rst)
 		shift = 0;
-	end if (count == 3) begin
+	else if (count == 3)
 		shift = 1;
-	end else begin
+	else
 		shift = 0;
-	end
 end
 
 always @(posedge clk or posedge rst)
 begin
 	if (rst) begin
 		sreg <= 1;
-	end if (shift == 1) begin
+	end else if (shift == 1) begin
 		sreg <= sreg << 1;
 		sreg[0] <= sreg[7];
 //	end else begin
