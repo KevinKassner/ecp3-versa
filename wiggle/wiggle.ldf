@@ -4,11 +4,14 @@
         <Option name="HDL type" value="VHDL"/>
     </Options>
     <Implementation title="wiggle" dir="wiggle" description="wiggle" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="wiggle" top="wiggle"/>
-        <Source name="wiggle.vhd" type="VHDL" type_short="VHDL">
-            <Options top_module="wiggle"/>
+        <Options top="wiggle"/>
+        <Source name="wiggle.v" type="Verilog" type_short="Verilog">
+            <Options/>
         </Source>
         <Source name="wiggle.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="wiggle/wiggle.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
     </Implementation>
