@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.0" title="pcie_x1" device="LFE3-35EA-8FN484C" default_implementation="pcie_x1">
+    <Options>
+        <Option name="HDL type" value="VHDL"/>
+    </Options>
+    <Implementation title="pcie_x1" dir="pcie_x1" description="pcie_x1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="pcie_x1" top="pcie_x1"/>
+        <Source name="pcie_x1.v" type="Verilog" type_short="Verilog">
+            <Options top_module="pcie_x1"/>
+        </Source>
+        <Source name="pcie_x1.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="pcie_x1/pcie_x1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="pcie_x11.sty"/>
+</BaliProject>
